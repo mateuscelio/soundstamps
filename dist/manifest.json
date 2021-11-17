@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "SoundStamps",
+    "version": "1.0",
+  
+    "description": "Bookmark timestamps of music you listen on SoundCloud",
+  
+    "browser_action": {
+        "default_icon": "icons/sound_icon.svg",
+        "default_title": "SoundStamps",
+        "default_popup": "popup/index.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "notifications",
+        "storage"
+      ],
+    
+    "background": {
+        "scripts": ["background/index.js"]
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["*://soundcloud.com/*"],
+        "js": ["content/index.js"]
+      }
+    ]
+  
+  }
+  
