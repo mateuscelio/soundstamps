@@ -15,7 +15,7 @@ When clicked, the music is saved in a list with a link to the exact time in that
 ## Build instructions
 
 ```
-$ npm instal && npm run build:prod
+$ git clone https://github.com/mateuscelio/soundstamps.git && cd soundstamps && npm instal && npm run build:prod
 ```
 
 Then load the file inside `./web-ext-artifacts` as temporary add-on in your browser
