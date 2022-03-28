@@ -1,32 +1,32 @@
 {
-    "manifest_version": 2,
-    "name": "SoundStamps",
-    "version": "1.0",
-  
-    "description": "Bookmark timestamps of music you listen on SoundCloud",
-  
-    "browser_action": {
-        "default_icon": "assets/icons/sound_icon.svg",
-        "default_title": "SoundStamps",
-        "default_popup": "dist/popup/index.html"
-    },
+  "manifest_version": 2,
+  "name": "SoundStamps",
+  "version": "1.0",
 
-    "permissions": [
-        "activeTab",
-        "notifications",
-        "storage"
-      ],
-    
-    "background": {
-        "scripts": ["dist/background/index.js"]
-    },
+  "description": "Bookmark timestamps of music you listen on SoundCloud",
 
-    "content_scripts": [
-      {
-        "matches": ["*://soundcloud.com/*"],
-        "js": ["dist/content/index.js"]
-      }
-    ]
-  
-  }
-  
+  "browser_action": {
+    "default_icon": "assets/icons/sound_icon.svg",
+    "default_title": "SoundStamps",
+    "default_popup": "build/index.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mateuscelio10@hotmail.com"
+    }
+  },
+
+  "permissions": ["activeTab", "notifications", "storage"],
+
+  "background": {
+    "scripts": ["build/background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://soundcloud.com/*"],
+      "js": ["build/content.js"]
+    }
+  ]
+}
